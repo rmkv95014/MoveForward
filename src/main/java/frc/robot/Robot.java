@@ -11,8 +11,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
 /**
- * The VM is configured to automatically run this class, and to call the functions corresponding to
- * each mode, as described in the TimedRobot documentation. If you change the name of this class or
+ * If you change the name of this class or
  * the package after creating this project, you must also update the build.gradle file in the
  * project.
  */
@@ -26,7 +25,7 @@ public class Robot extends TimedRobot {
     by pasting this link: 
     http://devsite.ctr-electronics.com/maven/release/com/ctre/phoenix/Phoenix-latest.json
    */
-  private TalonSRX rightLead;
+  private TalonSRX rightLead, leftLead;
   private RobotContainer m_robotContainer;
 
   /**
@@ -38,6 +37,23 @@ public class Robot extends TimedRobot {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
+
+    /* 
+     * initialize all the TalonSRX's (don't worry about the motor id's)
+     * (you can set the motor id's to something random).
+     * In addition, configure the motors to their factory robot settings
+     * and set the followers to follow the leaders. Do so like this:
+     * exampleMotor.follow(leadMotor);
+     */
+    
+    // if both motors spin in the same direction the robot cannot move properly
+    leftLead.setInverted(true);
+    rightLead.setInverted(false);
+
+    /*
+     * Start the motors, and set the motor output to 0.3. 
+     * Once three seconds have elapsed, stop the motors
+     */
   }
 
   /**
