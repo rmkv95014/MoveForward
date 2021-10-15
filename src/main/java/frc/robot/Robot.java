@@ -25,7 +25,7 @@ public class Robot extends TimedRobot {
     by pasting this link: 
     http://devsite.ctr-electronics.com/maven/release/com/ctre/phoenix/Phoenix-latest.json
    */
-  private TalonSRX rightLead, leftLead;
+  private TalonSRX rightLead, leftLead, rightFollow, leftFollow;
   private RobotContainer m_robotContainer;
 
   /**
@@ -45,14 +45,10 @@ public class Robot extends TimedRobot {
      * and set the followers to follow the leaders. Do so like this:
      * exampleMotor.follow(leadMotor);
      */
-    
-    // if both motors spin in the same direction the robot cannot move properly
-    leftLead.setInverted(true);
-    rightLead.setInverted(false);
 
     /*
      * Start the motors, and set the motor output to 0.3. 
-     * Once three seconds have elapsed, stop the motors
+     * Once five seconds have elapsed, stop the motors
      */
   }
 
