@@ -45,11 +45,7 @@ public class Robot extends TimedRobot {
      * and set the followers to follow the leaders. Do so like this:
      * exampleMotor.follow(leadMotor);
      */
-
-    /*
-     * Start the motors, and set the motor output to 0.3. 
-     * Once five seconds have elapsed, stop the motors
-     */
+    
   }
 
   /**
@@ -99,11 +95,19 @@ public class Robot extends TimedRobot {
     if (m_autonomousCommand != null) {
       m_autonomousCommand.cancel();
     }
+
+    /*
+    * Start the motors, and set the motor output to 0.3. 
+    */
   }
 
   /** This function is called periodically during operator control. */
   @Override
-  public void teleopPeriodic() {}
+  public void teleopPeriodic() {
+    /* 
+     * Once five seconds have elapsed, stop the motors
+     */
+  }
 
   @Override
   public void testInit() {
