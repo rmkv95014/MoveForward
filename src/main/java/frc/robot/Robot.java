@@ -6,9 +6,11 @@ package frc.robot;
 
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
 /**
  * If you change the name of this class or
@@ -26,6 +28,17 @@ public class Robot extends TimedRobot {
     http://devsite.ctr-electronics.com/maven/release/com/ctre/phoenix/Phoenix-latest.json
    */
   private TalonSRX rightLead, leftLead, rightFollow, leftFollow;
+  private double startTime;
+  /*
+   * The object of type `Joystick` is an object that represents 
+   * the physical joystick. 
+   */
+  private Joystick joystick;
+  /*
+   * The object(s) of type JoystickButton represent the 
+   * buttons that are on the Joystick 
+   */
+  private JoystickButton move3sec, turn3sec;
   private RobotContainer m_robotContainer;
 
   /**
@@ -38,14 +51,22 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
 
+    /*
+     * Initalize the Joystick (no parameters needed)
+     * once the joystic is initalized, initalize the buttons as well.
+     * You will need to pass in 2 parameters into the constructor:
+     * the joystick itself and a button id. Use button id's 3 and 4
+     * for either one.
+     */
+
     /* 
      * initialize all the TalonSRX's (don't worry about the motor id's)
      * (you can set the motor id's to something random).
      * In addition, configure the motors to their factory robot settings
      * and set the followers to follow the leaders. Do so like this:
      * exampleMotor.follow(leadMotor);
-     */
-    
+     */ 
+
   }
 
   /**
@@ -97,7 +118,11 @@ public class Robot extends TimedRobot {
     }
 
     /*
-    * Start the motors, and set the motor output to 0.3. 
+    * Start the motors, and set the motor output to 0.3. (This is for normal movement)
+    * How would you do this if it were rotating?
+    * Make sure to initalize the startTime variable as well. 
+    * How would you check if you should rotate or if you should move? 
+    * (To check if a button has been clicked, use joystickButton.get())
     */
   }
 
@@ -105,7 +130,9 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     /* 
-     * Once five seconds have elapsed, stop the motors
+     * Once five seconds have elapsed, stop the motors.
+     * You can do this for either case, so you do not need 
+     * to check if it is moving or if it is rotating.
      */
   }
 
