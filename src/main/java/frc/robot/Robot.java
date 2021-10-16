@@ -30,7 +30,7 @@ public class Robot extends TimedRobot {
   private TalonSRX rightLead, leftLead, rightFollow, leftFollow;
   private double startTime;
   /*
-   * The object of type `Joystick` is an object that represents 
+   * The object of type Joystick is an object that represents 
    * the physical joystick. 
    */
   private Joystick joystick;
@@ -38,7 +38,7 @@ public class Robot extends TimedRobot {
    * The object(s) of type JoystickButton represent the 
    * buttons that are on the Joystick 
    */
-  private JoystickButton move3sec, turn3sec;
+  private JoystickButton move5sec, turn5sec;
   private RobotContainer m_robotContainer;
 
   /**
