@@ -23,7 +23,7 @@ public class Robot extends TimedRobot {
   /* 
     initalize a total of 4 Talon motors (2 on each side)
     if there is an error under your TalonSRX, 
-    click Cmd+Shift+P and install a new Library online 
+    click Cmd/Ctrl+Shift+P and install a new Library online 
     by pasting this link: 
     http://devsite.ctr-electronics.com/maven/release/com/ctre/phoenix/Phoenix-latest.json
    */
@@ -53,7 +53,7 @@ public class Robot extends TimedRobot {
 
     /*
      * Initalize the Joystick (no parameters needed)
-     * once the joystic is initalized, initalize the buttons as well.
+     * once the joystick is initalized, initalize the buttons as well.
      * You will need to pass in 2 parameters into the constructor:
      * the joystick itself and a button id. Use button id's 3 and 4
      * for either one.
@@ -62,7 +62,7 @@ public class Robot extends TimedRobot {
     /* 
      * initialize all the TalonSRX's (don't worry about the motor id's)
      * (you can set the motor id's to something random).
-     * In addition, configure the motors to their factory robot settings
+     * In addition, configure the motors to their factory default settings
      * and set the followers to follow the leaders. Do so like this:
      * exampleMotor.follow(leadMotor);
      */ 
