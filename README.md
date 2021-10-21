@@ -15,6 +15,7 @@
 ### Drive5Seconds
 * Complete robotInit()
     * Initalize the Joystick variable
+        * Pass it the parameter 0
     * Initalize all the JoystickButton variables
         * Pass the JoystickButton constructor the JoyStick and a number: either 3 or 4
         (this represents one of the four buttons on the Joystick) 
